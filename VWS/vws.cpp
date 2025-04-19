@@ -7,6 +7,7 @@ VectorWeaveStudio::VectorWeaveStudio(QWidget *parent)
 {
     setupUi(this);
 
+    // Menus
     connect(actionExit,  &QAction::triggered, this, &VectorWeaveStudio::close);
     connect(actionOpen,  &QAction::triggered, this, &VectorWeaveStudio::openFile);
     connect(actionSave,  &QAction::triggered, this, &VectorWeaveStudio::saveFile);
@@ -15,6 +16,9 @@ VectorWeaveStudio::VectorWeaveStudio(QWidget *parent)
     connect(actionCopy,  &QAction::triggered, this, &VectorWeaveStudio::copy);
     connect(actionPaste, &QAction::triggered, this, &VectorWeaveStudio::paste);
     connect(actionAbout, &QAction::triggered, this, &VectorWeaveStudio::about);
+
+    // Tiles
+
 }
 
 // public ----------------------------------------------------------------------------------------------------
