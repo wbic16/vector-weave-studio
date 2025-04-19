@@ -1,15 +1,9 @@
-#ifndef VWS_H
-#define VWS_H
-
+#pragma once
 #include <QMainWindow>
+#include "./ui_vectorweavestudio.h"
+#include "utils.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class VectorWeaveStudio;
-}
-QT_END_NAMESPACE
-
-class VectorWeaveStudio : public QMainWindow
+class VectorWeaveStudio : public QMainWindow, public Ui::VectorWeaveStudio
 {
     Q_OBJECT
 
@@ -17,7 +11,16 @@ public:
     VectorWeaveStudio(QWidget *parent = nullptr);
     ~VectorWeaveStudio();
 
-private:
-    Ui::VectorWeaveStudio *ui;
+    // File
+    void openFile();
+    void saveFile();
+    void closeFile();
+
+    // Edit
+    void cut();
+    void copy();
+    void paste();
+
+    // Help
+    void about();
 };
-#endif // VWS_H
