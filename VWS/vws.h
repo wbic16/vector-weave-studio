@@ -23,4 +23,7 @@ public:
 
     // Help
     void about();
+
+    // Tiles
+    void renderTile(int x, int y, QPushButton &tile);
 };
