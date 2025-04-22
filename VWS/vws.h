@@ -1,7 +1,7 @@
 #pragma once
 #include <QMainWindow>
 #include "./ui_vectorweavestudio.h"
-#include "utils.h"
+#include <set>
 
 class VectorWeaveStudio : public QMainWindow, public Ui::VectorWeaveStudio
 {
@@ -26,4 +26,7 @@ public:
 
     // Tiles
     void renderTile(int x, int y, QPushButton &tile);
+
+private:
+    std::set<QPushButton*> m_tiles;
 };
